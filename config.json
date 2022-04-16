@@ -1,0 +1,5 @@
+{
+	"apikey-location": "api.key",
+	"webcache-location": "web-cache",
+	"output-location":"output"
+}

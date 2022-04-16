@@ -1,8 +1,8 @@
 import seaborn as sns
 import pandas as pd
 import matplotlib.pyplot as plt
-from sklearn.metrics import top_k_accuracy_score
 from pytrackunit.trackunit import TrackUnit
+from pytrackunit.sqlcache import SqlCache
 from datetime import datetime
 import json
 
@@ -15,6 +15,9 @@ def get_errors_img(_type=357):
     veh_list = tu.get_unitlist(_type=" "+str(_type))
     #self.veh_list += tu.get_unitlist(_type=" 349")
     print("Got {} Vehicles".format(len(veh_list)))
+
+    # Use sqlcache for this
+    tu.cache = SqlCache(auth=('API',open('api.key').read()))
 
     input_list = [veh_list[i]['id'] for i in range(len(veh_list))]
 
