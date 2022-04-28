@@ -1,5 +1,10 @@
 {
-	"apikey-location": "api.key",
-	"webcache-location": "web-cache",
-	"output-location":"output"
+	"apikey_path": "api.key",
+	"webcache_path": "web-cache",
+	"output_path":"output",
+	"max_requests":49,
+	"sql_timeout":300,
+	"verbose":false,
+	"tu_use_sqlcache":true,
+	"use_async_generator":true
 }
